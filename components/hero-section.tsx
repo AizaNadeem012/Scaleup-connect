@@ -5,6 +5,7 @@ import { Users, Globe, TrendingUp, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
+import Link from "next/link";  // ✅ ye import add karna hoga
 
 export default function HeroSection() {
   const stats = [
@@ -34,15 +35,12 @@ export default function HeroSection() {
             transition={{ duration: 0.7 }}
             className="pt-6 md:pt-10 text-[#003728] leading-snug"
           >
-            {/* Small Intro Line */}
             <span className="block text-xl md:text-2xl font-medium tracking-wide">
               Empowering{" "}
               <span className="bg-gradient-to-r from-[#003728] to-[#002A1F] bg-clip-text text-transparent font-semibold">
                 Careers
               </span>
             </span>
-
-            {/* Main Big Line */}
             <span className="mt-2 block text-4xl md:text-6xl font-extrabold relative inline-block">
               Enabling Growth
               <span className="absolute -bottom-2 left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 w-20 h-1 bg-[#003728] rounded-full"></span>
@@ -67,9 +65,13 @@ export default function HeroSection() {
             transition={{ delay: 0.5, duration: 0.7 }}
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
-            <Button className="bg-[#003728] text-white px-6 md:px-7 py-3 text-sm rounded-xl hover:bg-[#002A1F] transition-colors shadow-md">
-              Get in Touch
-            </Button>
+            {/* ✅ Get in Touch => Contact Page */}
+            <Link href="/contact">
+              <Button className="bg-[#003728] text-white px-6 md:px-7 py-3 text-sm rounded-xl hover:bg-[#002A1F] transition-colors shadow-md">
+                Get in Touch
+              </Button>
+            </Link>
+
             <Button
               variant="outline"
               className="border-2 border-[#003728] text-[#003728] hover:bg-[#F2FBF7] px-6 md:px-7 py-3 text-sm rounded-xl transition-colors shadow-sm"
