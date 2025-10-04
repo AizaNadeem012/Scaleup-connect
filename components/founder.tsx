@@ -24,7 +24,7 @@ export default function FounderShowcase() {
         >
           <div className="relative w-[340px] h-[460px] rounded-3xl shadow-xl overflow-hidden border-4 border-[#003728]/80">
             <Image
-              src="/founder.jpg"
+              src="/Founder.jpg"
               alt="Muhammad Hassaan Rasheed"
               width={400}
               height={500}
