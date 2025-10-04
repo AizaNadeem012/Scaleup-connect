@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Search, Clock, ArrowLeft } from "lucide-react";
 import Navigation from "@/components/navigation";
+import { Footer } from "@/components/footer";
 
 // Brand Colors
 const PRIMARY_COLOR = "#003728";
@@ -556,6 +557,7 @@ export default function BlogApp() {
           <BlogList onSelectPost={setSelectedPostId} />
         )}
       </div>
+      <Footer />
     </div>
   );
 }
