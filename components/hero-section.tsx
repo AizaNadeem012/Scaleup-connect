@@ -53,9 +53,8 @@ export default function HeroSection() {
             transition={{ delay: 0.3, duration: 0.7 }}
             className="text-base md:text-lg lg:text-xl font-sans text-[#003728] max-w-xl mx-auto lg:mx-0 leading-relaxed"
           >
-            Building Teams, Fueling Futures. We connect talented people with
-            ambitious companies to create brighter tomorrows through AI-powered
-            recruitment solutions.
+            Building Teams, Fueling Futures. We connect talented people with ambitious companies to 
+            create brighter tomorrows through AI-powered recruitment solutions.
           </motion.p>
 
           {/* CTA Buttons */}
