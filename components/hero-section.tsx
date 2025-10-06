@@ -53,8 +53,11 @@ export default function HeroSection() {
             transition={{ delay: 0.3, duration: 0.7 }}
             className="text-base md:text-lg lg:text-xl font-sans text-[#003728] max-w-xl mx-auto lg:mx-0 leading-relaxed"
           >
-            Building Teams, Fueling Futures. We connect talented people with ambitious companies to 
-            create brighter tomorrows through AI-powered recruitment solutions.
+            From Aitemad Screening that builds trust, to Organizational Psychology that shapes 
+stronger cultures — we help companies grow with purpose. Our L&D Solutions ignite potential, 
+while Corporate Legal Services safeguard every step of the journey. Together, we connect 
+talent and ambition through AI-powered recruitment, creating workplaces where people and 
+businesses thrive.
           </motion.p>
 
           {/* CTA Buttons */}
