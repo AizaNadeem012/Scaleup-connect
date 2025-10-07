@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import Navigation from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import MarqueeBrand from "@/components/marqueeBand";
+
 
 export default function ContractStaffingPage() {
   return (
