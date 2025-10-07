@@ -19,7 +19,6 @@ import WhyChooseUsSection from "@/components/why-choose-us-section"
 import CaseStudiesSection from "@/components/case-studies-section"
 import TeamSection from "@/components/team-section"
 import AwardsSection from "@/components/awards-section"
-import MarqueeBrand from "@/components/marqueeBand"
 import PricingSection from "@/components/pricing-section"
 import FAQSection from "@/components/faq-section"
 import NewsletterSection from "@/components/newsletter-section"
@@ -32,7 +31,7 @@ export default function HomePage() {
     
       <ServicesSection />
       <FounderSection />
-      <MarqueeBrand/>
+     
       <ProcessSection />
       <IndustriesSection />
       <AboutSection />
