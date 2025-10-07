@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import MarqueeBand from "@/components/marque";
+
 import {
   Crown,
   CheckCircle,
@@ -618,7 +618,7 @@ export default function ExecutiveTalentAcquisitionPage() {
           </motion.div>
         </div>
       </section>
-<MarqueeBand/>
+
       <Footer />
     </main>
   );
