@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import MarqueeBand from "@/components/marque";
+
 import {
   BookOpen,
   CheckCircle,
@@ -645,7 +645,7 @@ export default function LearningDevelopmentPage() {
           </motion.div>
         </div>
       </section>
- <MarqueeBand/>
+
       <Footer />
     </main>
   );
