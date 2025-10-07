@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import MarqueeBrand from "@/components/marque";
+
 import {
   Shield,
   CheckCircle,
@@ -510,7 +510,7 @@ export default function BackgroundVerificationPage() {
           </motion.div>
         </div>
       </section>
-          <MarqueeBrand/>
+         
       <Footer />
     </main>
   );
