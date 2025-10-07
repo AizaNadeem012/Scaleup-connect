@@ -38,7 +38,7 @@ export default function HomePage() {
       <Carosel />
       <FAQSection />
       <NewsletterSection />
-      <MarqueeSection/>
+      
       <Footer />
     </main>
   )
