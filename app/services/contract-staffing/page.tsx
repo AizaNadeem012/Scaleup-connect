@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import MarqueeBand from "@/components/marque";
+
 import {
   Briefcase,
   CheckCircle,
@@ -548,7 +548,7 @@ export default function ContractStaffingPage() {
           </div>
         </motion.div>
       </section>
-<MarqueeBand/>
+
       <Footer />
     </main>
   );
