@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import MarqueeBand from "@/components/marque";
+
 import {
   Users,
   CheckCircle,
@@ -598,7 +598,7 @@ export default function MassHiringPage() {
           </motion.div>
         </div>
       </section>
-<MarqueeBand/>
+
       <Footer />
     </main>
   );
