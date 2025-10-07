@@ -6,7 +6,7 @@ import PartnersSection from "@/components/partners-section"
 import TestimonialsSection from "@/components/testimonials-section"
 
 import { ContactSection } from "@/components/contact-section"
-import FounderSection from "@/components/founder"
+// import FounderSection from "@/components/founder"
 import Testinomial1 from "@/components/testinomial1"
 import Carosel from "@/components/carosel"
 import { Footer } from "@/components/footer"
@@ -30,7 +30,7 @@ export default function HomePage() {
       <HeroSection />
     
       <ServicesSection />
-      <FounderSection />
+      {/* <FounderSection /> */}
      
       <ProcessSection />
       <IndustriesSection />
