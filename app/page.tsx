@@ -1,5 +1,5 @@
 import HeroSection from "@/components/hero-section"
-// import AboutSection from "@/components/about-section"
+import AboutSection from "@/components/about-section"
 // import Mask from "@/components/mask"
 import ServicesSection from "@/components/services-section"
 import PartnersSection from "@/components/partners-section"
