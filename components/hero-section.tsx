@@ -5,7 +5,7 @@ import { Users, Globe, TrendingUp, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
-import Link from "next/link";  // ✅ ye import add karna hoga
+import Link from "next/link";
 
 export default function HeroSection() {
   const stats = [
@@ -17,33 +17,46 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center bg-gradient-to-b from-white via-[#F9FFFC] to-[#F2FAF7] overflow-hidden pt-20 md:pt-24 pb-12 md:pb-16 w-full"
+      className="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20 pb-8 md:pb-12 w-full"
     >
-      {/* Decorative Background */}
+      {/* Full Page Background Image with optimized loading */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-10 left-0 w-40 h-40 md:w-60 md:h-60 bg-emerald-100 rounded-full mix-blend-multiply blur-3xl opacity-70"></div>
-        <div className="absolute bottom-10 right-0 w-48 h-48 md:w-72 md:h-72 bg-teal-200 rounded-full mix-blend-multiply blur-3xl opacity-60"></div>
-        <div className="absolute top-1/2 left-1/2 w-[250px] h-[250px] md:w-[400px] md:h-[400px] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#003728]/20 to-transparent rounded-full blur-3xl opacity-50"></div>
+        <Image
+          src="/bg.png"
+          alt="Pakistani professionals"
+          fill
+          className="object-cover"
+          priority
+          quality={75} // Reduced quality for faster loading
+          sizes="100vw" // Proper sizing for optimization
+        />
+        {/* Reduced Black Overlay for better balance */}
+        <div className="absolute inset-0 bg-black/65"></div>
+      </div>
+
+      {/* Simplified Decorative Background Elements */}
+      <div className="absolute inset-0 -z-5">
+        <div className="absolute top-10 left-0 w-40 h-40 md:w-60 md:h-60 bg-emerald-400/20 rounded-full mix-blend-overlay blur-3xl"></div>
+        <div className="absolute bottom-10 right-0 w-48 h-48 md:w-72 md:h-72 bg-teal-400/20 rounded-full mix-blend-overlay blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        {/* LEFT SIDE */}
-        <div className="text-center lg:text-left space-y-6 md:space-y-8">
+        {/* LEFT SIDE - Content aligned to left */}
+        <div className="text-center lg:text-left space-y-4 md:space-y-5">
           <motion.h1
             initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7 }}
-            className="pt-6 md:pt-10 text-[#003728] leading-snug"
+            className="pt-2 md:pt-4 text-white leading-tight"
           >
-            <span className="block text-xl md:text-2xl font-medium tracking-wide">
+            <span className="block text-2xl md:text-3xl font-light tracking-[0.08em] mb-2">
               Empowering{" "}
-              <span className="bg-gradient-to-r from-[#003728] to-[#002A1F] bg-clip-text text-transparent font-semibold">
+              <span className="font-semibold tracking-[0.08em]" style={{ color: "#003728" }}>
                 Careers
               </span>
             </span>
-            <span className="mt-2 block text-4xl md:text-6xl font-extrabold relative inline-block">
+            <span className="mt-2 block text-4xl md:text-6xl font-bold relative inline-block leading-[1.1] tracking-tight">
               Enabling Growth
-              <span className="absolute -bottom-2 left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 w-20 h-1 bg-[#003728] rounded-full"></span>
             </span>
           </motion.h1>
 
@@ -51,13 +64,13 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.7 }}
-            className="text-base md:text-lg lg:text-xl font-sans text-[#003728] max-w-xl mx-auto lg:mx-0 leading-relaxed"
+            className="text-sm md:text-base lg:text-lg font-light text-white/95 max-w-xl mx-auto lg:mx-0 leading-relaxed tracking-wide"
           >
             From Aitemad Screening that builds trust, to Organizational Psychology that shapes 
-stronger cultures — we help companies grow with purpose. Our L&D Solutions ignite potential, 
-while Corporate Legal Services safeguard every step of the journey. Together, we connect 
-talent and ambition through AI-powered recruitment, creating workplaces where people and 
-businesses thrive.
+            stronger cultures — we help companies grow with purpose. Our L&D Solutions ignite potential, 
+            while Corporate Legal Services safeguard every step of the journey. Together, we connect 
+            talent and ambition through AI-powered recruitment, creating workplaces where people and 
+            businesses thrive.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -67,77 +80,46 @@ businesses thrive.
             transition={{ delay: 0.5, duration: 0.7 }}
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
-            {/* ✅ Get in Touch => Contact Page */}
             <Link href="/contact">
-              <Button className="bg-[#003728] text-white px-6 md:px-7 py-3 text-sm rounded-xl hover:bg-[#002A1F] transition-colors shadow-md">
+              <Button className="bg-white text-[#003728] px-7 md:px-8 py-3 text-sm font-medium rounded-xl hover:bg-emerald-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Get in Touch
               </Button>
             </Link>
 
-            <Button
-              variant="outline"
-              className="border-2 border-[#003728] text-[#003728] hover:bg-[#F2FBF7] px-6 md:px-7 py-3 text-sm rounded-xl transition-colors shadow-sm"
-            >
-              Learn More
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-white text-[#003728] px-7 md:px-8 py-3 text-sm font-medium rounded-xl hover:bg-emerald-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Learn More
+              </Button>
+            </Link>
           </motion.div>
 
-          {/* Stats */}
-          <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 pt-6 flex-wrap">
+          {/* Stats - Enhanced Design */}
+          <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 pt-3 flex-wrap">
             {stats.map((stat, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 + idx * 0.2, duration: 0.6 }}
-                className="flex items-center gap-2 bg-white/80 backdrop-blur-md rounded-xl px-4 py-3 shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
+                className="flex items-center gap-3 bg-white/15 backdrop-blur-md rounded-xl px-4 py-3 shadow-lg hover:shadow-xl transition-all w-full sm:w-auto border border-white/25"
               >
-                <div className="w-9 h-9 md:w-10 md:h-10 bg-[#003728]/10 rounded-full flex items-center justify-center">
-                  <stat.icon className="h-5 w-5 text-[#003728]" />
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                  <stat.icon className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-base md:text-lg font-bold text-[#003728]">
+                  <h3 className="text-lg md:text-xl font-bold text-white">
                     <CountUp start={0} end={stat.value} duration={2.5} separator="," />
                     {stat.suffix}
                   </h3>
-                  <p className="text-[#003728] text-xs md:text-sm">{stat.label}</p>
+                  <p className="text-white/90 text-sm font-medium">{stat.label}</p>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
 
-        {/* RIGHT SIDE IMAGE */}
-        <div className="relative flex justify-center lg:justify-end">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5, duration: 0.7 }}
-            className="relative w-full max-w-sm sm:max-w-md h-[320px] sm:h-[420px] md:h-[450px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
-          >
-            <Image
-              src="https://theenterpriseworld.com/wp-content/uploads/2019/08/1.3.-6.-Creating-a-Positive-Workplace-Image-by-Cecilie_Arcurs-from-Getty-Images-Signature.jpg"
-              alt="Teamwork"
-              fill
-              className="object-cover scale-105"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent"></div>
-
-            {/* Floating Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-white/95 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-full flex items-center gap-2 shadow-md border border-gray-200"
-            >
-              <ShieldCheck className="h-4 w-4 text-[#003728]" />
-              <span className="text-[10px] sm:text-xs font-semibold text-[#003728]">
-                Trusted Worldwide
-              </span>
-            </motion.div>
-          </motion.div>
-        </div>
+        {/* RIGHT SIDE - Empty space */}
+        <div className="hidden lg:block"></div>
       </div>
     </section>
   );
