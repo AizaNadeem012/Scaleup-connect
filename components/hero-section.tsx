@@ -42,20 +42,20 @@ export default function HeroSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* LEFT SIDE - Content aligned to left */}
-        <div className="text-center lg:text-left space-y-4 md:space-y-5">
+        <div className="text-center lg:text-left space-y-3 md:space-y-4">
           <motion.h1
             initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7 }}
             className="pt-2 md:pt-4 text-white leading-tight"
           >
-            <span className="block text-2xl md:text-3xl font-light tracking-[0.08em] mb-2">
+            <span className="block text-lg md:text-xl font-light tracking-[0.08em] mb-2">
               Empowering{" "}
               <span className="font-semibold tracking-[0.08em]" style={{ color: "#003728" }}>
                 Careers
               </span>
             </span>
-            <span className="mt-2 block text-4xl md:text-6xl font-bold relative inline-block leading-[1.1] tracking-tight">
+            <span className="mt-2 block text-2xl md:text-4xl font-bold relative inline-block leading-[1.1] tracking-tight">
               Enabling Growth
             </span>
           </motion.h1>
@@ -64,7 +64,7 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.7 }}
-            className="text-sm md:text-base lg:text-lg font-light text-white/95 max-w-xl mx-auto lg:mx-0 leading-relaxed tracking-wide"
+            className="text-xs md:text-sm lg:text-base font-light text-white/95 max-w-xl mx-auto lg:mx-0 leading-relaxed tracking-wide"
           >
             From Aitemad Screening that builds trust, to Organizational Psychology that shapes 
             stronger cultures — we help companies grow with purpose. Our L&D Solutions ignite potential, 
@@ -81,37 +81,37 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
             <Link href="/contact">
-              <Button className="bg-white text-[#003728] px-7 md:px-8 py-3 text-sm font-medium rounded-xl hover:bg-emerald-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <Button className="bg-white text-[#003728] px-6 md:px-7 py-2.5 text-sm font-medium rounded-xl hover:bg-emerald-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Get in Touch
               </Button>
             </Link>
 
             <Link href="/contact">
-              <Button className="bg-white text-[#003728] px-7 md:px-8 py-3 text-sm font-medium rounded-xl hover:bg-emerald-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <Button className="bg-white text-[#003728] px-6 md:px-7 py-2.5 text-sm font-medium rounded-xl hover:bg-emerald-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Learn More
               </Button>
             </Link>
           </motion.div>
 
           {/* Stats - Enhanced Design */}
-          <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 pt-3 flex-wrap">
+          <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-3 pt-2 flex-wrap">
             {stats.map((stat, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 + idx * 0.2, duration: 0.6 }}
-                className="flex items-center gap-3 bg-white/15 backdrop-blur-md rounded-xl px-4 py-3 shadow-lg hover:shadow-xl transition-all w-full sm:w-auto border border-white/25"
+                className="flex items-center gap-3 bg-white/15 backdrop-blur-md rounded-xl px-3 py-2.5 shadow-lg hover:shadow-xl transition-all w-full sm:w-auto border border-white/25"
               >
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                  <stat.icon className="h-5 w-5 text-white" />
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                  <stat.icon className="h-4 w-4 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold text-white">
+                  <h3 className="text-base md:text-lg font-bold text-white">
                     <CountUp start={0} end={stat.value} duration={2.5} separator="," />
                     {stat.suffix}
                   </h3>
-                  <p className="text-white/90 text-sm font-medium">{stat.label}</p>
+                  <p className="text-white/90 text-xs font-medium">{stat.label}</p>
                 </div>
               </motion.div>
             ))}
