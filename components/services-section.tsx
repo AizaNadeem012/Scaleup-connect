@@ -40,7 +40,11 @@ export default function OurEdgeSection() {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="text-[#003728] text-lg md:text-xl max-w-3xl mx-auto mb-16"
         >
-          Scaleup Connect empowers businesses by connecting them with the right talent, streamlining recruitment, and providing cutting-edge HR solutions for growth.
+          <b>Trust. Growth. Compliance.</b>
+          <br />
+          Scaleup Connect transforms hiring with Aitemad Screening, strengthens teams through L&D
+          and Organizational Psychology, and safeguards success with Corporate Legal Services.
+
         </motion.p>
 
         {/* Features Grid */}
