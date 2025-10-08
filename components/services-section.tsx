@@ -5,12 +5,12 @@ import { Users, ClipboardList, Briefcase, ShieldCheck, Globe, TrendingUp } from 
 
 export default function OurEdgeSection() {
   const features = [
-    { icon: Users, title: "Mass Hiring", description: "Efficiently hire large talent pools with structured assessment systems." },
-    { icon: ClipboardList, title: "Executive Talent Acquisition", description: "Secure top leadership talent for strategic business growth." },
+    { icon: ShieldCheck, title: "Aitemad Screening Services", description: "Ensure risk-free hiring with comprehensive verification services." },
+    { icon: TrendingUp, title: "Organizational Psychology Services", description: "Boost workforce productivity with behavioral insights and coaching." },
     { icon: Briefcase, title: "Learning & Development", description: "Empowering employees with soft & technical skills for the AI-driven world." },
-    { icon: ShieldCheck, title: "Background Verification", description: "Ensure risk-free hiring with comprehensive verification services." },
+    { icon: ClipboardList, title: "Corporate Legal Services", description: "Navigate complex legal landscapes with expert guidance and compliance." },
     { icon: Globe, title: "Contract Staffing", description: "Flexible staffing solutions to adapt to dynamic business needs." },
-    { icon: TrendingUp, title: "Organizational Psychology", description: "Boost workforce productivity with behavioral insights and coaching." },
+    { icon: Users, title: "Executive Talent Acquisition", description: "Secure top leadership talent for strategic business growth." },
   ];
 
   return (
@@ -44,7 +44,6 @@ export default function OurEdgeSection() {
           <br />
           Scaleup Connect transforms hiring with Aitemad Screening, strengthens teams through L&D
           and Organizational Psychology, and safeguards success with Corporate Legal Services.
-
         </motion.p>
 
         {/* Features Grid */}
