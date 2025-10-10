@@ -362,6 +362,7 @@ export default function CorporateLegalAffairsPage() {
           </Link>
         </div>
       </section>
+      <Footer/>
     </main>
   );
 }
