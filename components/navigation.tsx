@@ -19,13 +19,13 @@ export default function Navigation() {
     { href: "/contact", label: "Contact Us", icon: <Phone className="h-4 w-4 mr-1" /> },
   ];
 
-  // ✅ Services Submenu (Exact folder paths)
+  // ✅ Services Submenu (Updated label)
   const serviceItems = [
     { href: "/services/background-verification", label: "Aitemad Screening Services" },
     { href: "/services/contract-staffing", label: "Contract Staffing" },
     { href: "/services/executive-talent-acquisition", label: "Executive Talent Acquisition" },
     { href: "/services/learning-development", label: "Learning & Development" },
-    { href: "/services/mass-hiring", label: "Corporate Legal Affairs" },
+    { href: "/services/mass-hiring", label: "Corporate Legal Affairs" }, // ✅ Only label changed
     { href: "/services/organizational-psychology", label: "Organizational Psychology" },
   ];
 
