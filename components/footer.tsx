@@ -19,9 +19,10 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               {[
-                { Icon: Linkedin, link: "#" },
-                { Icon: Twitter, link: "#" },
-                { Icon: Facebook, link: "#" },
+                { Icon: Linkedin, link: "https://lnkd.in/dukQJiEh " },
+                { Icon: Twitter, link: " https://www.instagram.com/scaleupconnect/" },
+                { Icon: Facebook, link: " https://www.facebook.com/profile.php?id=61579688127730
+" },
               ].map(({ Icon, link }, i) => (
                 <a
                   key={i}
