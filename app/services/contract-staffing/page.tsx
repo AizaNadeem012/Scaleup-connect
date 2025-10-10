@@ -45,7 +45,7 @@ export default function ContractStaffingPage() {
                 <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-[#003728] to-[#002A1F] rounded-lg shadow-lg">
                   <Briefcase className="h-5 w-5 text-white" />
                 </div>
-                <div className="h-1 w-16 bg-gradient-to-r from-[#003728] to-emerald-400 rounded-full"></div>
+                {/* <div className="h-1 w-16 bg-gradient-to-r from-[#003728] to-emerald-400 rounded-full"></div> */}
               </div>
               
               {/* HEADING SIZE ADJUSTED: text-5xl -> text-4xl | md:text-7xl -> md:text-5xl */}
