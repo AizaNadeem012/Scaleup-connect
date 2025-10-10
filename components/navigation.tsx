@@ -25,7 +25,8 @@ export default function Navigation() {
     { href: "/services/contract-staffing", label: "Contract Staffing" },
     { href: "/services/executive-talent-acquisition", label: "Executive Talent Acquisition" },
     { href: "/services/learning-development", label: "Learning & Development" },
-    { href: "/services/mass-hiring", label: "Mass Hiring" },
+    { href: "/services/mass-hiring", label: "Corporate Legal
+Affairs" },
     { href: "/services/organizational-psychology", label: "Organizational Psychology" },
   ];
 
