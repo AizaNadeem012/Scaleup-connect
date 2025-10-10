@@ -21,7 +21,7 @@ export default function Navigation() {
 
   // ✅ Services Submenu (Exact folder paths)
   const serviceItems = [
-    { href: "/services/background-verification", label: "Background Verification" },
+    { href: "/services/background-verification", label: "Aitemad Screening Services" },
     { href: "/services/contract-staffing", label: "Contract Staffing" },
     { href: "/services/executive-talent-acquisition", label: "Executive Talent Acquisition" },
     { href: "/services/learning-development", label: "Learning & Development" },
