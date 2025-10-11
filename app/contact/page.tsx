@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Send, CheckCircle } from "lucide-react";
+
 import Navigation from "@/components/navigation";
 import { Footer } from "@/components/footer";
-
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -22,21 +22,30 @@ export default function ContactPage() {
       Message: form.Message.value,
     };
 
-    // Create a plain text message body
+    // ✅ Nicely formatted email layout
     const messageBody = `
-Name: ${data.Name}
-Email: ${data.Email}
-Phone: ${data.Phone}
-Company: ${data.Company}
-Message: ${data.Message}
+📩 New Contact Form Submission
+
+━━━━━━━━━━━━━━━━━━━
+👤 Name: ${data.Name}
+
+📧 Email: ${data.Email}
+
+📞 Phone: ${data.Phone || "N/A"}
+
+🏢 Company: ${data.Company || "N/A"}
+
+💬 Message:
+${data.Message}
+━━━━━━━━━━━━━━━━━━━
 `;
 
-    // Send using FormSubmit (auto-email to your inbox)
-    fetch("https://formsubmit.co/ajax/info@scaleupconnect.com", {
+    // Send via FormSubmit
+    fetch("https://formsubmit.co/ajax/an3710828@gmail.com", {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({
-        _subject: "New Contact Form Submission",
+        _subject: "📩 New Message from ScaleUp Connect Website",
         message: messageBody,
       }),
     })
@@ -58,7 +67,7 @@ Message: ${data.Message}
 
   return (
     <main className="min-h-screen w-full overflow-x-hidden">
-      <Navigation />
+      <Navigation/>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-b from-[#F2FAF7] via-white to-[#F9FFFC] text-center">
         <motion.h1
@@ -84,7 +93,6 @@ Message: ${data.Message}
       {/* Contact Info + Form Section */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -217,7 +225,7 @@ Message: ${data.Message}
           </motion.div>
         </div>
       </section>
-      <Footer />
+      <Footer/>
     </main>
   );
 }
