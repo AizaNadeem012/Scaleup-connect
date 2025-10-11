@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Linkedin, Twitter, Facebook, Mail, Phone, MapPin } from "lucide-react";
+import { Linkedin, Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -23,7 +23,7 @@ export function Footer() {
               {[
                 { Icon: Linkedin, link: "https://lnkd.in/dukQJiEh" },
                 {
-                  Icon: Twitter,
+                  Icon: Instagram,
                   link: "https://www.instagram.com/scaleupconnect/",
                 },
                 {
