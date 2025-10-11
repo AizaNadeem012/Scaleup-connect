@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { Linkedin, Twitter, Facebook, Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
@@ -17,16 +18,24 @@ export function Footer() {
               Empowering careers and enabling growth through innovative talent
               solutions. Building teams, fueling futures across the globe.
             </p>
+
             <div className="flex space-x-4">
               {[
-                { Icon: Linkedin, link: "https://lnkd.in/dukQJiEh " },
-                { Icon: Twitter, link: " https://www.instagram.com/scaleupconnect/" },
-                { Icon: Facebook, link: " https://www.facebook.com/profile.php?id=61579688127730
-" },
+                { Icon: Linkedin, link: "https://lnkd.in/dukQJiEh" },
+                {
+                  Icon: Twitter,
+                  link: "https://www.instagram.com/scaleupconnect/",
+                },
+                {
+                  Icon: Facebook,
+                  link: "https://www.facebook.com/profile.php?id=61579688127730",
+                },
               ].map(({ Icon, link }, i) => (
                 <a
                   key={i}
                   href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-11 h-11 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
                 >
                   <Icon className="h-5 w-5 text-white" />
@@ -61,21 +70,23 @@ export function Footer() {
           <div>
             <h4 className="text-xl font-semibold mb-4">Contact</h4>
             <ul className="space-y-4 text-white/80">
-              <li className="flex items-center gap-3">
-                <MapPin className="h-5 w-5 text-white/60" />
-                Office 01, Ground Floor,
-                <br></br>
-                Sunrio Residency, Nazimabad No.3,
-                <br></br>
-                Karachi , Pakistan
+              <li className="flex items-start gap-3">
+                <MapPin className="h-5 w-5 text-white/60 mt-1" />
+                <span>
+                  Office 01, Ground Floor,
+                  <br />
+                  Sunrio Residency, Nazimabad No.3,
+                  <br />
+                  Karachi, Pakistan
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-white/60" />
-                +92 21-34333333
+                <span>+92 21-34333333</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-white/60" />
-                info@scaleupconnect.com
+                <span>info@scaleupconnect.com</span>
               </li>
             </ul>
           </div>
@@ -94,3 +105,5 @@ export function Footer() {
     </footer>
   );
 }
+
+export default Footer;
