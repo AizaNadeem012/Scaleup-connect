@@ -49,10 +49,12 @@ export function Footer() {
             <h4 className="text-xl font-semibold mb-4">Services</h4>
             <ul className="space-y-3 text-white/80">
               {[
-                "Mass Hiring",
+                "Aitemad
+Screening Service",
                 "Executive Search",
                 "Learning & Development",
-                "Background Verification",
+                "Contract
+Staffing",
               ].map((service, i) => (
                 <li key={i}>
                   <a
