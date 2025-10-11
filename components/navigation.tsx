@@ -45,7 +45,7 @@ export default function Navigation() {
           </div>
           {/* Right */}
           <div className="flex items-center gap-2">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-200">
+            <a href="https://www.linkedin.com/company/scaleup-connect/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="hover:text-gray-200">
               <Linkedin className="h-4 w-4" />
             </a>
           </div>
