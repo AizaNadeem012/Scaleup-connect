@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   description:
     "Premier HR agency in Karachi, Pakistan. Building Teams, Fueling Futures with innovative talent solutions.",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.png",
+  },
 }
 
 export default function RootLayout({
