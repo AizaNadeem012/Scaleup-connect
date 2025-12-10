@@ -39,8 +39,8 @@ export default function Navigation() {
             <a href="mailto:info@scaleupconnect.com" className="flex items-center gap-1 hover:underline">
               <Mail className="h-3.5 w-3.5" /> info@scaleupconnect.com
             </a>
-            <a href="tel:+922134333333" className="flex items-center gap-1 hover:underline">
-              <Phone className="h-3.5 w-3.5" /> +92 21-34333333
+            <a href="tel:02136610451" className="flex items-center gap-1 hover:underline">
+              <Phone className="h-3.5 w-3.5" /> 02136610451
             </a>
           </div>
           {/* Right */}
