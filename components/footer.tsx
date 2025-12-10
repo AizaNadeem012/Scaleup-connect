@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Linkedin, Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react";
+import { Linkedin, Instagram, Facebook, Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 export function Footer() {
   return (
@@ -11,6 +11,7 @@ export function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          
           {/* Company Info */}
           <div className="md:col-span-2">
             <h3 className="text-3xl font-bold mb-4">ScaleUp Connect</h3>
@@ -22,14 +23,8 @@ export function Footer() {
             <div className="flex space-x-4">
               {[
                 { Icon: Linkedin, link: "https://lnkd.in/dukQJiEh" },
-                {
-                  Icon: Instagram,
-                  link: "https://www.instagram.com/scaleupconnect/",
-                },
-                {
-                  Icon: Facebook,
-                  link: "https://www.facebook.com/profile.php?id=61579688127730",
-                },
+                { Icon: Instagram, link: "https://www.instagram.com/scaleupconnect/" },
+                { Icon: Facebook, link: "https://www.facebook.com/profile.php?id=61579688127730" },
               ].map(({ Icon, link }, i) => (
                 <a
                   key={i}
@@ -50,16 +45,12 @@ export function Footer() {
             <ul className="space-y-3 text-white/80">
               {[
                 "Aitemad Screening Service",
-
                 "Executive Search",
                 "Learning & Development",
                 "Contract Staffing",
               ].map((service, i) => (
                 <li key={i}>
-                  <a
-                    href="#"
-                    className="hover:text-white hover:pl-1 transition-all"
-                  >
+                  <a href="#" className="hover:text-white hover:pl-1 transition-all">
                     {service}
                   </a>
                 </li>
@@ -71,6 +62,8 @@ export function Footer() {
           <div>
             <h4 className="text-xl font-semibold mb-4">Contact</h4>
             <ul className="space-y-4 text-white/80">
+              
+              {/* Address */}
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-white/60 mt-1" />
                 <span>
@@ -81,10 +74,20 @@ export function Footer() {
                   Karachi, Pakistan
                 </span>
               </li>
+
+              {/* PTCL Number */}
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-white/60" />
-                <span>+92 21-34333333</span>
+                <span>02136610451</span>
               </li>
+
+              {/* WhatsApp Number */}
+              <li className="flex items-center gap-3">
+                <MessageCircle className="h-5 w-5 text-white/60" />
+                <span>03350315233</span>
+              </li>
+
+              {/* Email */}
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-white/60" />
                 <span>info@scaleupconnect.com</span>
@@ -98,9 +101,7 @@ export function Footer() {
           <p className="text-white/60 text-sm">
             © {new Date().getFullYear()} ScaleUp Connect. All rights reserved.
           </p>
-          <p className="text-white/60 text-sm">
-            Empowering Careers | Enabling Growth
-          </p>
+          <p className="text-white/60 text-sm">Empowering Careers | Enabling Growth</p>
         </div>
       </div>
     </footer>
