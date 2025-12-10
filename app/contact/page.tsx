@@ -22,7 +22,6 @@ export default function ContactPage() {
       Message: form.Message.value,
     };
 
-    // ✅ Nicely formatted email layout
     const messageBody = `
 📩 New Contact Form Submission
 
@@ -40,7 +39,6 @@ ${data.Message}
 ━━━━━━━━━━━━━━━━━━━
 `;
 
-    // Send via FormSubmit
     fetch("https://formsubmit.co/ajax/an3710828@gmail.com", {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
@@ -67,7 +65,8 @@ ${data.Message}
 
   return (
     <main className="min-h-screen w-full overflow-x-hidden">
-      <Navigation/>
+      <Navigation />
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-b from-[#F2FAF7] via-white to-[#F9FFFC] text-center">
         <motion.h1
@@ -124,8 +123,19 @@ ${data.Message}
                   <Phone className="h-6 w-6 text-[#003728]" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#003728]">Phone</h4>
-                  <p className="text-[#003728]/80">+92 21-34333333</p>
+                  <h4 className="font-semibold text-[#003728]">Phone (PTCL)</h4>
+                  <p className="text-[#003728]/80">02136610451</p>
+                </div>
+              </div>
+
+              {/* WhatsApp */}
+              <div className="flex items-start gap-4">
+                <div className="flex items-center justify-center w-12 h-12 bg-[#003728]/10 rounded-full">
+                  <Phone className="h-6 w-6 text-[#003728]" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-[#003728]">WhatsApp</h4>
+                  <p className="text-[#003728]/80">03350315233</p>
                 </div>
               </div>
 
@@ -225,7 +235,8 @@ ${data.Message}
           </motion.div>
         </div>
       </section>
-      <Footer/>
+
+      <Footer />
     </main>
   );
 }
