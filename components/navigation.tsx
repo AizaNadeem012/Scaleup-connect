@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, Home, Info, Briefcase, Star, Phone, Mail, Linkedin } from "lucide-react";
+import { Menu, X, Home, Info, Briefcase, Star, Phone, Mail, Linkedin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Navigation() {
@@ -19,13 +19,13 @@ export default function Navigation() {
     { href: "/contact", label: "Contact Us", icon: <Phone className="h-4 w-4 mr-1" /> },
   ];
 
-  // ✅ Services Submenu (Updated label)
+  // Services Submenu
   const serviceItems = [
     { href: "/services/background-verification", label: "Aitemad Screening Services" },
     { href: "/services/contract-staffing", label: "Contract Staffing" },
     { href: "/services/executive-talent-acquisition", label: "Executive Talent Acquisition" },
     { href: "/services/learning-development", label: "Learning & Development" },
-    { href: "/services/mass-hiring", label: "Corporate Legal Affairs" }, // ✅ Only label changed
+    { href: "/services/mass-hiring", label: "Corporate Legal Affairs" },
     { href: "/services/organizational-psychology", label: "Organizational Psychology" },
   ];
 
@@ -34,21 +34,43 @@ export default function Navigation() {
       {/* 🔹 Top Bar */}
       <div style={{ backgroundColor: "#003728" }} className="text-white text-xs">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-1">
-          {/* Left */}
-          <div className="flex items-center gap-3">
+
+          {/* Left Side */}
+          <div className="flex items-center gap-4">
+
+            {/* Email */}
             <a href="mailto:info@scaleupconnect.com" className="flex items-center gap-1 hover:underline">
               <Mail className="h-3.5 w-3.5" /> info@scaleupconnect.com
             </a>
+
+            {/* PTCL Number */}
             <a href="tel:02136610451" className="flex items-center gap-1 hover:underline">
               <Phone className="h-3.5 w-3.5" /> 02136610451
             </a>
+
+            {/* WhatsApp Number */}
+            <a
+              href="https://wa.me/923350315233"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 hover:underline"
+            >
+              <MessageCircle className="h-3.5 w-3.5" /> 03350315233
+            </a>
           </div>
-          {/* Right */}
+
+          {/* Right Side */}
           <div className="flex items-center gap-2">
-            <a href="https://www.linkedin.com/company/scaleup-connect/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="hover:text-gray-200">
+            <a
+              href="https://www.linkedin.com/company/scaleup-connect/?viewAsMember=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-200"
+            >
               <Linkedin className="h-4 w-4" />
             </a>
           </div>
+
         </div>
       </div>
 
@@ -56,6 +78,7 @@ export default function Navigation() {
       <nav className="bg-gradient-to-r from-white to-emerald-50 border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <div className="flex items-center justify-between h-16">
+
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
@@ -82,7 +105,6 @@ export default function Navigation() {
                     <span className="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-emerald-600 transition-all duration-300 group-hover:w-full" />
                   </Link>
                 ) : (
-                  // 🔽 Services Dropdown
                   <div
                     key="services"
                     className="relative group"
@@ -106,6 +128,7 @@ export default function Navigation() {
                       <div className="bg-emerald-600 text-white px-4 py-2 text-sm font-semibold">
                         Explore Services
                       </div>
+
                       <ul className="divide-y divide-gray-100">
                         {serviceItems.map((service) => (
                           <li key={service.href}>
@@ -118,6 +141,7 @@ export default function Navigation() {
                           </li>
                         ))}
                       </ul>
+
                     </div>
                   </div>
                 )
@@ -143,6 +167,7 @@ export default function Navigation() {
                 {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>
+
           </div>
         </div>
 
@@ -163,6 +188,7 @@ export default function Navigation() {
               ) : (
                 <div key="services" className="mt-2 space-y-1">
                   <div className="px-3 pt-2 text-xs font-semibold text-gray-500">Services</div>
+
                   {serviceItems.map((service) => (
                     <Link
                       key={service.href}
@@ -184,6 +210,7 @@ export default function Navigation() {
                 </Button>
               </Link>
             </div>
+
           </div>
         )}
       </nav>
